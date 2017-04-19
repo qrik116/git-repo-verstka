@@ -1,0 +1,103 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	.main-header_company_filter
+		display: block
+	html .human-map_map-area_descr
+		position: static
+		margin-top: 15px
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.main-header_select-place p
+		margin-right: 0
+		&:before
+			margin-right: 0
+		span
+			display: none
+	.definition-slide-wrap
+		font-size: 40px
+		span
+			width: 400px
+			top: calc(50% - 20px)
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px)
+	body
+		padding-top: 50px
+	.main-header_select-place
+		text-align: left
+		margin-top: 15px
+	.main-header_search
+		padding: 0 15px
+	 .form-wrap
+			width: 100%
+	.main-header_nav
+		display: none
+		ul
+			display: block
+			li
+				display: block
+	.main-header_social
+		padding: 10px 0
+		a
+			margin-right: 5px
+			&:last-child
+				margin-right: 0
+	.main-header_company
+		.title
+			font-size: 32px
+
+	.definition-text
+		margin-top: 15px
+	.definition-slide-wrap
+		font-size: 32px
+		span
+			width: 300px
+	
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	.main-header_nav
+		display: block !important
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
+@media only screen and (min-width : 1350px)
+	.human-map_map-area_descr ul hr
+		display: block

@@ -1,0 +1,474 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: .5
+
+*:-moz-placeholder
+	color: #666
+	opacity: .5
+
+*::-moz-placeholder
+	color: #666
+	opacity: .5
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: .5
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+.text-center
+	text-align: center
+.text-right
+	text-align: right
+
+p, h1, h2, h3, ul, li
+	margin: 0
+	padding: 0
+	list-style-type: none
+h3
+	font-weight: normal
+	font-size: 18px
+
+a
+	color: inherit
+
+$height-line: 2px
+$size: 50px
+$line-hights: $size*0.3-$height-line
+$time1: 0.25s
+$time2: 0.2s
+$time3: 0.4s
+$color-line: #00679c
+.menu-btn
+	height: $size
+	width: $size
+	background: #000
+	border: none
+	position: relative
+	background: rgba(255, 255, 255, 0.15)
+	border-radius: 50%
+	cursor: pointer
+	z-index: 100
+	transition: all .3s ease
+	display: inline-block
+	> span
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		display: block
+		cursor: pointer
+		transition: opacity $time2 cubic-bezier(0.645, 0.045, 0.355, 1), transform $time3 cubic-bezier(0.4, 0.01, 0.165, 0.99)
+		.top, .middle, .bottom
+			position: absolute
+			height: 100%
+			width: 100%
+			left: 0
+			&:before
+				position: absolute
+				content: ""
+				top: 50%
+				left: 50%
+				width: 60%
+				display: inline-block
+				background: $color-line
+				height: $height-line
+				transform: translateX(-50%) translateY(-50%)
+				transition: opacity $time1 cubic-bezier(0.645, 0.045, 0.355, 1), transform $time3 cubic-bezier(0.4, 0.01, 0.165, 0.99)
+		.top:before
+			top: ($line-hights + $height-line)
+		.bottom:before
+			top: auto
+			bottom: $line-hights
+	&.open > span
+		transform: rotate(90deg)
+		.top
+			transform: rotate(45deg)
+			transition: transform $time1 $time2 cubic-bezier(0.4, 0.01, 0.165, 0.99)
+			&:before
+				transform: translate(-($line-hights + ($height-line - 1)), ($size/2 - ($line-hights + $height-line) - ($height-line - 1)))
+		.middle
+			transition: transform $time1 $time2 cubic-bezier(0.4, 0.01, 0.165, 0.99)
+			transform: rotate(45deg)
+			&:before
+				opacity: 0
+		.bottom
+			transition: transform $time1 $time2 cubic-bezier(0.4, 0.01, 0.165, 0.99)
+			transform: rotate(-45deg)
+			&:before
+				transform: translate(-($line-hights + ($height-line - 1)), -($size/2 - $line-hights - ($height-line - 1)))
+
+.flex-center
+	display: flex
+	align-items: center
+	flex-flow: wrap row
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	padding-top: 140px
+
+.ui-button, .ui-button:hover, .ui-button:active,
+.ui-button:focus
+	border: none
+	background: none
+	color: #00679c
+	outline: none
+	text-decoration: underline
+.ui-selectmenu-icon
+	position: absolute
+	right: .5em
+	top: 1em
+	border: 5px solid transparent
+	border-top: 5px solid
+.ui-widget
+	font-family: inherit
+.ui-menu .ui-state-active
+	margin: 0
+.ui-custom-bg
+	background: #fff
+	border: 1px solid #449bcf
+	border-top: none
+.ui-menu-item
+	border-top: 1px solid #449bcf
+
+.main-header_logo
+	img
+		max-width: 100%
+.main-header_select-place
+	font-family: 'Open Sans', sans-serif
+	p
+		color: #646f76
+		display: inline-block
+		margin-right: 30px
+		&:before
+			margin-right: 10px
+			content: '\f041'
+			font-family: FontAwesome
+			color: #c1c1c1
+			font-size: 25px
+.main-header_social
+	a
+		width: 30px
+		height: 30px
+		display: inline-block
+		transition: background .15s
+		&:last-child
+			margin-right: 0
+		&:hover
+			background-color: rgb(0, 0, 0)
+	.fb
+		background: url('../img/social.png')
+	.tw
+		background: url('../img/social.png') -40px 0
+	.vk
+		background: url('../img/social.png') -77px 0
+	.ok
+		background: url('../img/social.png') -117px 0
+	.youtube
+		background: url('../img/social.png') -156px 0
+	.instagram
+		background: url('../img/social.png') -195px 0
+.main-header_wrap
+	margin: 30px 0
+.main-header_search
+	height: 40px
+	background: #449bcf
+	display: flex
+	align-items: center
+	justify-content: center
+	.form-wrap
+		position: relative
+		display: inline-block
+		width: 50%
+		height: 1.6em
+	button
+		position: absolute
+		right: 4px
+		top: 2.3px
+		font-size: 11px
+		background: #00679c
+		color: #fff
+		border: none
+		border-radius: 20px
+		padding: 5px 15px
+		outline: none
+		transition: all .15s
+		&:hover
+			background: #0383c4
+		i
+			margin-left: 10px
+
+	form
+		height: 100%
+	input
+		width: 100%
+		border: none
+		border-radius: 20px
+		height: 100%
+		padding: 0 100px 0 20px
+		font-size: 11px
+.main-header_nav
+	background: #00679c
+	color: #fff
+	font-family: 'Open Sans', sans-serif
+	font-size: 15px
+	ul
+		display: flex
+		justify-content: space-around
+		li
+			display: inline-block
+			&:first-child a
+				padding: 7px 10px
+				padding-right: 5px
+			&:last-child a
+				padding-left: 5px
+			a
+				color: inherit
+				padding: 12.5px 5px
+				display: block
+.main-header_company
+	background: no-repeat url(../img/bg-rekl.png) left bottom #fdfcfc
+	height: 164px
+	padding-right: 2%
+	position: relative
+	.title
+		font-size: 47px
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		flex-flow: wrap row
+		height: 100%
+		color: #007ab5
+		position: relative
+		.with-icon
+			display: inline-block
+			border-right: 1px solid #00679c
+			padding-right: 35px
+			margin-right: 35px
+			padding-left: 40px
+			position: relative
+			&:before
+				content: url(../img/logo-company.png)
+				position: absolute
+				left: 0
+				top: -30px
+			p
+				text-align: center
+				font-size: .31em
+		h1
+			font-size: 1em
+			font-weight: normal
+		h2
+			display: inline-block
+			font-size: .8em
+			font-weight: normal
+.main-header_company_filter
+	position: absolute
+	width: 100%
+	height: 100%
+	background: rgba(255, 255, 255, .4)
+	display: none
+.breadcrumb
+	margin: 35px 0
+	ul li
+		display: inline-block
+		font-size: 15px
+		color: #9d9d9d
+		&:after
+			content: '>'
+			margin-left: 5px
+		&:last-child:after
+			content: none
+
+.human-map
+	color: #676666
+.human-map_title
+	h3
+		text-align: center
+		margin-bottom: 40px
+.human-map_map
+	position: relative
+	& > div
+		margin: 0 auto
+	img
+		max-width: 100%
+.human-map_map-area_descr
+	width: 300px
+	position: absolute
+	right: 0
+	top: 0
+	& > div
+		display: none
+	#head
+		hr
+			transform: rotate(185deg) translateX(100%)
+			width: 130px
+			top: 30px
+	#body
+		hr
+			transform: rotate(140deg) translateX(116%)
+			width: 130px
+			top: 10px
+			width: 160px
+	ul
+		font-size: 15px
+		margin: 10px 0
+		padding-left: 20px
+		font-size: 15px
+		margin: 10px 0
+		padding-left: 35px
+		border-left: 1px solid #bebebe
+		position: relative
+		left: -15px
+		hr
+			display: none
+			border-color: #bebebb
+			position: absolute
+			margin: 0
+			left: 0
+			width: 0
+		li
+			color: #67b3ea
+			list-style-type: square
+			a
+				line-height: 1.5em
+	p
+		font-size: 10px
+
+.definition
+	margin-top: 50px
+	h2
+		font-size: 30px
+		font-weight: normal
+		color: #fff
+		line-height: 55px
+		display: inline-block
+		width: 50%
+.definition-title.bg-blue
+	background: #00b4cd
+.definition-title.bg-light-brown
+	background: #c19d99
+.definition-title
+	position: relative
+.definition-title_opacity
+	background: #fff
+	opacity: .4
+	display: inline-block
+	height: 55px
+	width: 50%
+	position: absolute
+	top: 0
+	right: 0
+.definition-text-wrap
+	padding-top: 50px
+	.img img
+		max-width: 100%
+.definition-text
+	color: #565656
+	position: relative
+	width: 80%
+	margin: 0 auto
+	padding: 55px 45px
+	h2
+		color: inherit
+		line-height: normal
+.definition-slide
+	position: relative
+.definition-slide-wrap
+	position: relative
+	font-size: 55px
+	img
+		width: 100%
+	span
+		width: 550px
+		text-align: right
+		color: #fff
+		position: absolute
+		right: 0
+		top: calc(50% + 50px)
+		background: rgba(0, 159, 226, .7)
+		font-size: inherit
+		padding: 5px 1.5em 5px .6em
+
+.customNextBtn, .customPrevBtn
+	position: absolute
+	width: 35px
+	height: 35px
+	top: 50%
+	z-index: 2000
+	cursor: pointer
+.customNextBtn
+	background: url(../img/prev-next-btn.png) no-repeat -35px
+	right: 15px
+.customPrevBtn
+	background: url(../img/prev-next-btn.png) no-repeat 0
+	left: 15px
+
+.angle
+	position: absolute
+	&:after, &:before
+		position: absolute
+		content: ''
+		background: #9bcde0
+		display: inline-block
+	&:before
+		height: 5px
+		width: 85px
+	&:after
+		width: 5px
+		height: 85px
+.angle.angle-tl
+	top: 0
+	left: 0
+	&:before
+		top: 0
+		left: 0
+	&:after
+		top: 0
+		left: 0
+.angle.angle-tr
+	top: 0
+	right: 0
+	&:before
+		right: 0
+	&:after
+		right: 0
+.angle.angle-bl
+	bottom: 0
+	left: 0
+	&:before
+		bottom: 0
+	&:after
+		bottom: 0
+.angle.angle-br
+	bottom: 0
+	right: 0
+	&:before
+		bottom: 0
+		right: 0
+	&:after
+		bottom: 0
+		right: 0
+
+
+@import "media" // Всегда в конце

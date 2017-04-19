@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Title</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+</head>
+
+<body>
+
+	<header class="main-header">
+
+		<div class="container">
+			<div class="row flex-center">
+				<div class="col-xs-8 col-sm-3">
+					<div class="main-header_logo">
+						<a href="/"><img src="./img/logo.png" alt="logo"></a>
+					</div>
+				</div>
+
+				<div class="col-xs-4 visible-xs text-right">
+					<div class="menu-btn">
+						<span>
+							<span class="top"></span>
+							<span class="middle"></span>
+							<span class="bottom"></span>
+						</span>
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-sm-5 col-md-6 text-center">
+					<div class="main-header_select-place">
+						<p><span>Выберите город и регион</span></p>
+						<select name="city">
+							<option value="Санкт-Петербург" selected>Санкт-Петербург</option>
+							<option value="Москва">Москва</option>
+						</select>
+					</div>
+				</div>
+				<div class="hidden-xs col-sm-4 col-md-3 text-right">
+					<div class="main-header_social">
+						<a href="#" class="fb"></a>
+						<a href="#" class="tw"></a>
+						<a href="#" class="vk"></a>
+						<a href="#" class="ok"></a>
+						<a href="#" class="youtube"></a>
+						<a href="#" class="instagram"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="main-header_wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="main-header_search">
+							<div class="form-wrap">
+								<form action="#">
+									<input type="text" placeholder="я ищу...">
+									<button type="submit">найти <i class="fa fa-search" aria-hidden="true"></i></button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 text-center">
+						<nav class="main-header_nav">
+							<ul>
+								<li><a href="/"><img src="./img/home-link.png" alt="home"></a></li>
+								<li><a href="#">Новости</a></li>
+								<li><a href="#">Статьи</a></li>
+								<li><a href="#">Клиника</a></li>
+								<li><a href="#">Контакты</a></li>
+								<li><a href="#">Разделы медицины</a></li>
+								<li><a href="#">Вопрос-ответ</a></li>
+							</ul>
+							<div class="main-header_social visible-xs">
+								<a href="#" class="fb"></a>
+								<a href="#" class="tw"></a>
+								<a href="#" class="vk"></a>
+								<a href="#" class="ok"></a>
+								<a href="#" class="youtube"></a>
+								<a href="#" class="instagram"></a>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="main-header_company-wrap">
+			<div class="container">
+				<div class="main-header_company text-right">
+					<div class="main-header_company_filter"></div>
+					<div class="title">
+						<span class="with-icon">
+							<h1>БИОМЕД</h1>
+							<p>центр лазерной терапии</p>
+						</span>
+						<h2>БОТОКС (330 руб/единица)</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</header>
+
+	<section class="breadcrumb">
+		<div class="container">
+			<ul>
+				<li><a href="#">Главная</a></li>
+				<li><a href="#">Питание</a></li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="human-map">
+		<div class="container">
+			<div class="human-map_title">
+				<h3>Нажмите на беспокоющую Вас область, чтобы мы смогли Вам помочь</h3>
+			</div>
+			<div class="human-map_map">
+				<img src="./img/men.jpg" alt="alt" usemap="#map1">
+				<map id='map1' name="map1">
+					<area id="body_area" shape="poly" coords="523,370,532,370,539,362,545,351,551,335,558,320,567,307,575,299,577,292,579,285,578,275,575,260,575,248,576,236,579,225,580,219,571,212,563,204,550,200,540,198,528,196,518,195,504,195,496,203,485,204,478,209,469,213,464,223,470,245,473,251,472,264,472,280,474,293,475,300,481,311,489,320,497,327,505,342" href="#body" alt="alt" />
+					<area id="head_area" shape="poly" coords="523,97,528,95,534,92,540,86,543,79,544,70,547,67,550,67,552,60,555,55,554,49,549,50,550,41,550,33,547,23,541,16,535,11,527,6,518,8,507,11,498,14,493,21,490,28,490,39,490,48,489,50,487,48,486,48,485,52,485,59,489,65,493,67,495,72,498,84,500,89,508,95,515,97" href="#head" alt="alt" >
+				</map>
+				<div class="human-map_map-area_descr">
+					<div id="body">
+						<h3>Органы брюшной полости:</h3>
+						<ul>
+							<li><a href="#">надпочечники</a></li>
+							<li><a href="#">почки</a></li>
+							<li><a href="#">желчный пузырь</a></li>
+							<li><a href="#">мочеточник</a></li>
+							<li><a href="#">печень</a></li>
+							<li><a href="#">селезенка</a></li>
+							<li><a href="#">желудочно-кишечный тракт</a></li>
+							<hr>
+						</ul>
+						<p>Спереди и с боков их расположение ограничивает брюшнаястенка, пронизанная мышцами, жировой клетчаткой и соединительнотканными образованиями. За кровоснабжение отвечают кровеносные сосуды.</p>
+					</div>
+					<div id="head">
+						<h3>Голова:</h3>
+						<ul>
+							<li><a href="#">мозг</a></li>
+							<li><a href="#">глаза</a></li>
+							<li><a href="#">уши</a></li>
+							<hr>
+						</ul>
+						<p>Спереди и с боков их расположение ограничивает брюшнаястенка, пронизанная мышцами, жировой клетчаткой и соединительнотканными образованиями. За кровоснабжение отвечают кровеносные сосуды.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="definition">
+
+		<div class="definition-title bg-blue">
+			<div class="container">
+				<h2>Определение:</h2>
+			</div>
+			<span class="definition-title_opacity"></span>
+		</div>
+
+		<div class="definition-text-wrap">
+			<div class="container">
+				<div class="row flex-center">
+					<div class="col-sm-6">
+						<div class="img"><img src="./img/heart.jpg" alt="alt"></div>
+					</div>
+					<div class="col-sm-6 flex-center">
+						<div class="definition-text">
+							<span class="angle angle-tl"></span>
+							<span class="angle angle-tr"></span>
+							<span class="angle angle-bl"></span>
+							<span class="angle angle-br"></span>
+							<h2>Печень</h2>
+							<p>(лат. jecur, jecor, hepar, др.-греч.) — жизненно важнаяжелеза внешней секреции позвоночных животных, в том числе и человека, находящаяся в брюшной полости (полости живота) под диафрагмой и выполняющая большое количество различных физиологических функций. Печень является самой крупной железой позвоночных.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<section class="definition">
+
+		<div class="definition-title bg-light-brown">
+			<div class="container">
+				<h2>Лечение:</h2>
+			</div>
+			<span class="definition-title_opacity"></span>
+		</div>
+
+		<div class="definition-slide">
+			<div class="owl-carousel owl-theme">
+				<div class="definition-slide-wrap">
+					<img src="./img/slide-1.jpg" alt="alt">
+					<span>К какому врачу обратиться</span>
+				</div>
+				<div class="definition-slide-wrap">
+					<img src="./img/slide-1.jpg" alt="alt">
+					<span>К какому врачу обратиться</span>
+				</div>
+			</div>
+			<span class="customNextBtn"></span>
+			<span class="customPrevBtn"></span>
+		</div>
+
+	</section>
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/html5shiv/respond.min.js"></script>
+	<![endif]-->
+
+	<link rel="stylesheet" href="css/main.min.css">
+	<script src="js/scripts.min.js"></script>
+
+	<!-- Yandex.Metrika counter -->
+	<!-- /Yandex.Metrika counter -->
+	<!-- Google Analytics counter -->
+	<!-- /Google Analytics counter -->
+
+</body>
+
+</html>
